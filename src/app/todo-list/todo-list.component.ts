@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
+  counter: number = 1;
+  list: { name: string }[] = [];
+
   constructor() { }
 
+  addNum(num: number) {
+    this.counter += num;
+  }
+
   ngOnInit(): void {
+  }
+
+  addToTheToDoList(listElement: {name: string}) {
+    if (!listElement.name) {
+      return;
+    }
+    this.list.push(listElement);
+  }
+
+  deleteFromToDoList(index: number) {
+    this.list.splice(index, 1);
   }
 
 }

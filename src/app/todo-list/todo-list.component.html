@@ -1,23 +1,38 @@
 <div>
-  <div class="jumbotron jumbotron-fluid" style="margin: 30px">
-    <div class="container">
-      <h1 class="display-4">Hello and welcome!</h1>
-      <p class="lead">This is your personal TODO list application.</p>
-      <p class="lead">Let's start! </p>
-      <hr class="my-4" >
+  <div class="head-container">
+    <h1 class="display-4">Hello and welcome!</h1>
+    <p class="lead">This is your personal TODO list application.</p>
+    <p class="lead">Let's start! </p>
+    <hr class="my-4">
+  </div>
+
+  <div class="form-group">
+    <label for="toDoImput" style="margin-bottom: 10px; margin-top: 10px">Insert your text here:</label>
+    <input type="text" class="form-control"
+           aria-label="Default"
+           id="toDoImput"
+           aria-describedby="inputGroup-sizing-default"
+           #listElem (keydown.enter)="addButton.click()">
+    <h6 style="margin-bottom: 10px; margin-top: 10px">Note: Only 1 list item can be added at a time!</h6>
+
+    <button type="submit"
+            class="btn btn-primary add-btn"
+            (click)="addToTheToDoList({name: listElem.value})"
+            (click)="listElem.value=''"
+            #addButton>Add
+    </button>
+  </div>
+
+
+  <div class="list-container">
+    <div class="list-element" *ngFor="let listItem of list; let i = index">
+      <h6> {{i + 1}} ) {{listItem.name}} </h6>
+      <button id="deleteBtn" type="button" class="btn btn-danger"
+              (click)="deleteFromToDoList(i)">Remove
+      </button>
     </div>
   </div>
 
-  <div>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Insert your text here:</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-      <h6 style="margin-bottom: 10px; margin-top: 10px">Note: Only 1 list item can be added at a time!</h6>
-    </div>
-
-    <button type="button" class="btn btn-primary">Save</button>
-
-  </div>
 
 </div>
 
