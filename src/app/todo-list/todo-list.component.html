@@ -1,9 +1,9 @@
 <div>
   <div class="head-container">
-    <h1 class="display-4">Hello and welcome!</h1>
+    <h1 class="display-5">Hello and welcome!</h1>
     <p class="lead">This is your personal TODO list application.</p>
     <p class="lead">Let's start! </p>
-    <hr class="my-4">
+    <hr>
   </div>
 
   <div class="form-group">
@@ -23,16 +23,14 @@
     </button>
   </div>
 
-
   <div class="list-container">
     <div class="list-element" *ngFor="let listItem of list; let i = index">
-      <h6> {{i + 1}} ) {{listItem.name}} </h6>
+      <h6> {{i + 1}} )&nbsp; {{listItem.name}} </h6>
       <button id="deleteBtn" type="button" class="btn btn-danger"
               (click)="deleteFromToDoList(i)">Remove
       </button>
     </div>
   </div>
-
 
 </div>
 
