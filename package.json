@@ -1,7 +1,7 @@
 {
   "name": "crud-prj",
   "version": "0.0.0",
-  "homepage": "https://kovalskiii.github.io/ToDoList/",
+  "homepage": "https://kovalskiii.github.io/ToDoList",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
