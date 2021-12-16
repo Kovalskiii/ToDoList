@@ -1,4 +1,9 @@
 # CrudPrj
+site is published at: https://kovalskiii.github.io/ToDoList/
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/49062638/146379347-194210c4-f6de-4393-9ab8-87d3deba5628.png" alt="To do list app."/>
+</p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
